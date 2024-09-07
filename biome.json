@@ -4,7 +4,7 @@
 		"enabled": true
 	},
 	"files": {
-		"ignore": ["src/styles/reset.css"]
+		"ignore": ["src/styles/reset.css", "src/**/*.module.css.d.ts*"]
 	},
 	"vcs": {
 		"enabled": true,
