@@ -1,0 +1,8 @@
+pre-commit:
+  parallel: true
+  commands:
+    biome:
+      run: pnpm biome check {staged_files} --no-errors-on-unmatched
+    stylelint:
+      glob: "src/**/*.css"
+      run: pnpm stylelint {staged_files}
