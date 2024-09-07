@@ -1,24 +1,32 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.5"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
-  }
+	"name": "portfolio",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "run-p dev:*",
+		"dev:next": "next dev --turbo",
+		"dev:hcm": "hcm 'src/**/*.module.css' --watch",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"next": "14.2.8",
+		"react": "18.3.1",
+		"react-dom": "18.3.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@types/node": "20.16.5",
+		"@types/react": "18.3.5",
+		"@types/react-dom": "18.3.0",
+		"create-stylelint": "^0.5.0",
+		"happy-css-modules": "^3.1.1",
+		"npm-run-all2": "^6.2.2",
+		"postcss": "^8.4.45",
+		"stylelint": "^16.9.0",
+		"stylelint-config-recess-order": "^5.1.0",
+		"stylelint-config-standard": "^36.0.1",
+		"typescript": "5.5.4"
+	}
 }
