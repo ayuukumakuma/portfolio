@@ -17,7 +17,8 @@
 		"fix:stylelint": "stylelint --fix 'src/**/*.css'",
 		"check": "run-s check:*",
 		"check:biome": "biome check ./src/**/*",
-		"check:stylelint": "stylelint 'src/**/*.css'"
+		"check:stylelint": "stylelint 'src/**/*.css'",
+		"typecheck": "tsc --noEmit --diagnostics --pretty"
 	},
 	"dependencies": {
 		"next": "14.2.8",
