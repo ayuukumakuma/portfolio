@@ -1,0 +1,7 @@
+pre-commit:
+  parallel: true
+  commands:
+    biome:
+      run: biome check {staged_files}
+    stylelint:
+      run: stylelint {staged_files}

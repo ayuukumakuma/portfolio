@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  ci:
+  biome:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,3 +18,16 @@ jobs:
           version: latest
       - name: Run Biome
         run: biome ci ./src/**/*
+  stylelint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 'latest'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Run Stylelint
+        run: pnpm run check:stylelint
