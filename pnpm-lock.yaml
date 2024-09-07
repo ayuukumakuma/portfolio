@@ -52,7 +52,7 @@ importers:
         specifier: 5.1.0
         version: 5.1.0(stylelint@16.9.0(typescript@5.5.4))
       stylelint-config-standard:
-        specifier: ^36.0.1
+        specifier: 36.0.1
         version: 36.0.1(stylelint@16.9.0(typescript@5.5.4))
       typescript:
         specifier: 5.5.4
