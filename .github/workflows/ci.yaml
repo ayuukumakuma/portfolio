@@ -64,8 +64,6 @@ jobs:
           cache: "pnpm"
           cache-dependency-path: ./pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
-      - name: HCM Build
-        run: pnpm run hcm
       - name: Type Check
         run: pnpm run typecheck
   build-check:
