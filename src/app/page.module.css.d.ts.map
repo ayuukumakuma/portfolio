@@ -1,1 +1,1 @@
-{"version":3,"sources":["./page.module.css"],"names":["root"],"mappings":"AAAA;AAAA,E,aAAAA,M,WAAA;AAAA;AAAA","file":"page.module.css.d.ts","sourceRoot":""}
+{"version":3,"sources":["./page.module.css"],"names":["root","scrollContainer","scrollItem"],"mappings":"AAAA;AAAA,E,aAAAA,M,WAAA;AAAA,E,aAMAC,iB,WANA;AAAA,E,aAYAC,Y,WAZA;AAAA;AAAA","file":"page.module.css.d.ts","sourceRoot":""}

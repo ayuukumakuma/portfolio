@@ -3,3 +3,14 @@
 	font-weight: bolder;
 	color: var(--text-color);
 }
+
+.scrollContainer {
+	height: 100vh;
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
+}
+
+.scrollItem {
+	height: 100vh;
+	scroll-snap-align: start;
+}
