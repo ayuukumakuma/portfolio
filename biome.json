@@ -4,7 +4,11 @@
 		"enabled": true
 	},
 	"files": {
-		"ignore": ["src/styles/reset.css", "src/**/*.module.css.d.ts*"]
+		"ignore": [
+			"src/shared/styles/reset.css",
+			"src/shared/styles/variables.css",
+			"src/**/*.module.css.d.ts*"
+		]
 	},
 	"vcs": {
 		"enabled": true,
@@ -13,7 +17,8 @@
 	},
 	"formatter": {
 		"enabled": true,
-		"formatWithErrors": true
+		"formatWithErrors": true,
+		"indentWidth": 2
 	},
 	"linter": {
 		"enabled": true,
