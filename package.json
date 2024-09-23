@@ -2,9 +2,9 @@
 	"name": "portfolio",
 	"version": "0.1.0",
 	"private": true,
-	"packageManager": "pnpm@9.9.0",
+	"packageManager": "pnpm@9.10.0",
 	"engines": {
-		"pnpm": "9.9.0"
+		"pnpm": "9.10.0"
 	},
 	"scripts": {
 		"dev": "run-p dev:*",
@@ -12,12 +12,8 @@
 		"dev:hcm": "hcm 'src/**/*.module.css' --watch",
 		"build": "next build",
 		"start": "next start",
-		"fix": "run-p fix:*",
-		"fix:biome": "biome check --fix ./src/**/*",
-		"fix:stylelint": "stylelint --fix 'src/**/*.css'",
-		"check": "run-s check:*",
-		"check:biome": "biome check ./src/**/*",
-		"check:stylelint": "stylelint 'src/**/*.css'",
+		"fix": "biome check --fix ./src/**/*",
+		"check": "biome check ./src/**/*",
 		"typecheck": "tsc --noEmit --diagnostics --pretty"
 	},
 	"dependencies": {
@@ -31,14 +27,10 @@
 		"@types/node": "22.5.4",
 		"@types/react": "18.3.5",
 		"@types/react-dom": "18.3.0",
-		"create-stylelint": "0.5.0",
 		"happy-css-modules": "3.1.1",
 		"lefthook": "1.7.15",
 		"npm-run-all2": "6.2.2",
 		"postcss": "8.4.45",
-		"stylelint": "16.9.0",
-		"stylelint-config-recess-order": "5.1.0",
-		"stylelint-config-standard": "36.0.1",
 		"typescript": "5.5.4"
 	}
 }
