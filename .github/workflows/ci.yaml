@@ -33,26 +33,9 @@ jobs:
           version: latest
       - name: Run Biome
         run: biome ci ./src/**/*
-  stylelint:
-    needs: install-dependencies
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - run: corepack enable
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22.8.0"
-          cache: "pnpm"
-          cache-dependency-path: ./pnpm-lock.yaml
-      - run: pnpm install --frozen-lockfile
-      - name: Run Stylelint
-        run: pnpm run check:stylelint
   typecheck:
     needs: 
       - biome
-      - stylelint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
