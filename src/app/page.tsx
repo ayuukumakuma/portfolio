@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 
 export default function Home() {
 	const { scrollYProgress } = useScroll();
+
 	return (
 		<div className={styles.root}>
 			<motion.div
