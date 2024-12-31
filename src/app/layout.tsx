@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import "@styles/reset.css";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+	weight: ["400", "900"],
+	style: ["normal", "italic"],
+	subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
 	title: "Hi, I'm Ayuu!!",
@@ -12,7 +19,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="ja">
+		<html lang="ja" className={roboto.className}>
 			<body>{children}</body>
 		</html>
 	);

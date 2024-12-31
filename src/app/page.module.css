@@ -5,18 +5,18 @@
 
 .ayuu {
 	position: absolute;
-	top: -30%;
-	left: -30%;
+	bottom: -12vw;
+	right: -20vw;
 	z-index: 1;
 	background: linear-gradient(90deg, #087fc2, #33dde8);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-.portfolio {
+.im {
 	position: absolute;
-	bottom: -30%;
-	left: 20%;
+	top: -12vw;
+	left: -20vw;
 	z-index: 1;
 	background: linear-gradient(180deg, #ec263d, #fb649b);
 	-webkit-background-clip: text;

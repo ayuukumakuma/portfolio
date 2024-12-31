@@ -1,3 +1,7 @@
 .root {
-	font-size: 40rem;
+	font-size: 30vw;
+	font-weight: 900;
+	font-style: italic;
+	padding-inline: 2rem;
+	pointer-events: none;
 }
