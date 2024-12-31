@@ -5,21 +5,23 @@ import s from "./PlusIconGrid.module.css";
 
 export const PlusIconGrid = () => {
 	const subscribe = (callback: () => void) => {
-		if (typeof window === "undefined") return () => {};
+		if (typeof window !== "undefined") {
+			window.addEventListener("resize", callback);
 
-		window.addEventListener("resize", callback);
-
-		return () => {
-			window.removeEventListener("resize", callback);
-		};
+			return () => {
+				window.removeEventListener("resize", callback);
+			};
+		}
+		return () => {};
 	};
 
 	const lastSnapshot = useRef({
-		width: window ? window.innerWidth : 0,
-		height: window ? window.innerHeight : 0,
+		width: typeof window !== "undefined" ? window.innerWidth : 0,
+		height: typeof window !== "undefined" ? window.innerHeight : 0,
 	});
 
 	const getSnapshot = () => {
+		if (typeof window === "undefined") return lastSnapshot.current;
 		const newSnapshot = {
 			width: window.innerWidth,
 			height: window.innerHeight,
@@ -33,10 +35,9 @@ export const PlusIconGrid = () => {
 		return lastSnapshot.current;
 	};
 
-	const getServerSnapshot = () => ({
-		width: 0,
-		height: 0,
-	});
+	const serverSnapshot = useRef({ width: 0, height: 0 });
+
+	const getServerSnapshot = () => serverSnapshot.current;
 
 	const { width, height } = useSyncExternalStore(
 		subscribe,
