@@ -1,3 +1,9 @@
+import { AnimationBackground } from "./_components/AnimationBackground";
+
 export default function Home() {
-	return <div>hello</div>;
+	return (
+		<div>
+			<AnimationBackground scrollDirection="topToBottom" />
+		</div>
+	);
 }

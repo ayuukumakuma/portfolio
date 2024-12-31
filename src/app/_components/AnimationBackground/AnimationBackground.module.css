@@ -1,0 +1,14 @@
+.root {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+
+	&.row {
+		flex-direction: row;
+	}
+
+	&.column {
+		flex-direction: column;
+	}
+}
