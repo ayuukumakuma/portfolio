@@ -9,7 +9,7 @@
 	right: 2vw;
 	z-index: 1;
 
-	> div > div > span {
+	& > div > div > span {
 		background-color: #ffcd06;
 	}
 }
@@ -20,7 +20,7 @@
 	left: 2vw;
 	z-index: 1;
 
-	> div > div > span {
+	& > div > div > span {
 		background-color: #60d4f9;
 	}
 }
