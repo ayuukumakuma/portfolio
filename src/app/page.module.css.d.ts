@@ -1,5 +1,7 @@
 declare const styles:
   & Readonly<{ "root": string }>
+  & Readonly<{ "topRight": string }>
+  & Readonly<{ "bottomLeft": string }>
   & Readonly<{ "ayuu": string }>
   & Readonly<{ "im": string }>
 ;
