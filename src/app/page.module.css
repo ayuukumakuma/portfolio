@@ -1,0 +1,24 @@
+.root {
+	overflow: hidden;
+	position: relative;
+}
+
+.ayuu {
+	position: absolute;
+	top: -30%;
+	left: -30%;
+	z-index: 1;
+	background: linear-gradient(90deg, #087fc2, #33dde8);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.portfolio {
+	position: absolute;
+	bottom: -30%;
+	left: 20%;
+	z-index: 1;
+	background: linear-gradient(180deg, #ec263d, #fb649b);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

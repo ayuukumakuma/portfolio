@@ -87,7 +87,7 @@ export const AnimationBackground = ({ scrollDirection }: Props) => {
 					repeat: Number.POSITIVE_INFINITY,
 					repeatType: "loop",
 					ease: "linear",
-					duration: 20,
+					duration: 30,
 				}}
 			>
 				<PlusIconGrid />
@@ -98,7 +98,7 @@ export const AnimationBackground = ({ scrollDirection }: Props) => {
 					repeat: Number.POSITIVE_INFINITY,
 					repeatType: "loop",
 					ease: "linear",
-					duration: 20,
+					duration: 30,
 				}}
 			>
 				<PlusIconGrid />
