@@ -7,16 +7,20 @@ import s from "./page.module.css";
 export default function Home() {
 	return (
 		<div className={s.root}>
+			<div className={s.backgroundWrapper}>
+				<AnimationBackground scrollDirection="topToBottom" />
+			</div>
 			<div className={s.topRight}>
 				<RotatePluses rotate={-20} direction="rightToLeft" />
 			</div>
 			<div className={s.bottomLeft}>
 				<RotatePluses rotate={40} direction="leftToRight" />
 			</div>
-			<AnimationBackground scrollDirection="topToBottom" />
 			<BigText text="I AM" className={s.im} />
 			<BigText text="AYUU" className={s.ayuu} />
-			<Hero />
+			<div className={s.heroWrapper}>
+				<Hero />
+			</div>
 		</div>
 	);
 }
