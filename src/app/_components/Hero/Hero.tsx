@@ -11,12 +11,15 @@ export const Hero = () => {
 				whileHover={{
 					scale: 1.1,
 				}}
+				whileTap={{
+					scale: 1.1,
+				}}
 			>
 				<p className={s.text}>
 					<Typewriter words={["Hi! I'm Ayuu."]} typeSpeed={50} />
 				</p>
 				<p className={s.text}>
-					<Typewriter words={["I luv web developing ;)"]} typeSpeed={50} />
+					<Typewriter words={["I luv web developing!!"]} typeSpeed={50} />
 				</p>
 			</motion.div>
 		</div>
