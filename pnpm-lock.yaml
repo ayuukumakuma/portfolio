@@ -43,8 +43,8 @@ importers:
         specifier: 18.3.0
         version: 18.3.0
       happy-css-modules:
-        specifier: 3.1.1
-        version: 3.1.1(postcss@8.4.49)
+        specifier: 3.2.0
+        version: 3.2.0(postcss@8.4.49)
       lefthook:
         specifier: 1.7.15
         version: 1.7.15
@@ -487,8 +487,8 @@ packages:
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
-  happy-css-modules@3.1.1:
-    resolution: {integrity: sha512-i3KvqLtPlNFAnvSqjCZhlGoZLDyCwQaY0sljQh6tKJ4NTbdbbUUSmpMptQ1n4+damkbpdYmQyNqa1gYMW7KU3Q==}
+  happy-css-modules@3.2.0:
+    resolution: {integrity: sha512-S5h6KRy+XLbHwA91lO9PWGJ8iXcgqdVSD4DeXxpeF3UlKrYIew+118J9/4oYLrcIrBNkZQMUFK05E7qBPUt7qQ==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     peerDependencies:
@@ -1323,7 +1323,7 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  happy-css-modules@3.1.1(postcss@8.4.49):
+  happy-css-modules@3.2.0(postcss@8.4.49):
     dependencies:
       '@file-cache/core': 2.0.0
       '@file-cache/npm': 2.0.0
