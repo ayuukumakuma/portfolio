@@ -140,7 +140,7 @@ export const Hero = () => {
 									/>
 								</motion.div>
 							</a>
-							<Link href="/about" className={s.linkWrapper}>
+							<Link href="/contact" className={s.linkWrapper}>
 								<motion.div
 									className={s.link}
 									key="contact"
