@@ -5,6 +5,11 @@ declare const styles:
   & Readonly<{ "menuCircle": string }>
   & Readonly<{ "text": string }>
   & Readonly<{ "menuText": string }>
+  & Readonly<{ "linksText": string }>
+  & Readonly<{ "triangle": string }>
+  & Readonly<{ "links": string }>
+  & Readonly<{ "linkWrapper": string }>
+  & Readonly<{ "link": string }>
 ;
 export default styles;
 //# sourceMappingURL=./Hero.module.css.d.ts.map

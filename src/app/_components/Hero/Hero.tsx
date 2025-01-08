@@ -1,12 +1,23 @@
 "use client";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "motion/react";
+import Link from "next/link";
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import s from "./Hero.module.css";
 
+type RepeatType = "loop" | "reverse" | "mirror" | undefined;
+
 export const Hero = () => {
 	const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+	const triangleVariant = {
+		repeat: Number.POSITIVE_INFINITY,
+		repeatType: "loop" as RepeatType,
+		duration: 20,
+		ease: "linear",
+	};
+
 	return (
 		<div className={s.root} data-isopen={isOpenMenu}>
 			<motion.div
@@ -36,7 +47,7 @@ export const Hero = () => {
 					</motion.button>
 					{isOpenMenu && (
 						<motion.button
-							key={"menu"}
+							key="menu"
 							onClick={() => setIsOpenMenu(false)}
 							className={clsx(s.circle, s.menuCircle)}
 							whileTap={{
@@ -58,6 +69,109 @@ export const Hero = () => {
 						>
 							<p className={clsx(s.text, s.menuText)}>{"Menu >"}</p>
 						</motion.button>
+					)}
+				</AnimatePresence>
+				<AnimatePresence initial={false}>
+					{isOpenMenu && (
+						<div className={s.links}>
+							<Link href="/about" className={s.linkWrapper}>
+								<motion.div
+									className={s.link}
+									key="about"
+									initial={{
+										x: 0,
+									}}
+									animate={{
+										x: "50vw",
+									}}
+									exit={{
+										x: "150%",
+									}}
+									transition={{
+										duration: 0.2,
+									}}
+								>
+									<p className={clsx(s.text, s.linksText)}>about</p>
+									<motion.div
+										className={s.triangle}
+										initial={{
+											rotate: 0,
+										}}
+										animate={{
+											rotate: 360,
+										}}
+										transition={triangleVariant}
+									/>
+								</motion.div>
+							</Link>
+							<a
+								href="https://zenn.dev/ayuu"
+								target="_blank"
+								className={s.linkWrapper}
+								rel="noreferrer"
+							>
+								<motion.div
+									className={s.link}
+									key="blog"
+									initial={{
+										x: 0,
+									}}
+									animate={{
+										x: "70vw",
+									}}
+									exit={{
+										x: "150%",
+									}}
+									transition={{
+										delay: 0.1,
+										duration: 0.2,
+									}}
+								>
+									<p className={clsx(s.text, s.linksText)}>blog</p>
+									<motion.div
+										className={s.triangle}
+										initial={{
+											rotate: 0,
+										}}
+										animate={{
+											rotate: 360,
+										}}
+										transition={triangleVariant}
+									/>
+								</motion.div>
+							</a>
+							<Link href="/about" className={s.linkWrapper}>
+								<motion.div
+									className={s.link}
+									key="contact"
+									initial={{
+										x: 0,
+									}}
+									animate={{
+										x: "90vw",
+									}}
+									exit={{
+										x: "150%",
+									}}
+									transition={{
+										delay: 0.2,
+										duration: 0.2,
+									}}
+								>
+									<p className={clsx(s.text, s.linksText)}>contact</p>
+									<motion.div
+										className={s.triangle}
+										initial={{
+											rotate: 0,
+										}}
+										animate={{
+											rotate: 360,
+										}}
+										transition={triangleVariant}
+									/>
+								</motion.div>
+							</Link>
+						</div>
 					)}
 				</AnimatePresence>
 			</motion.div>
