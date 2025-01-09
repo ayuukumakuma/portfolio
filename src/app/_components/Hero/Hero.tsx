@@ -1,4 +1,5 @@
 "use client";
+import { IconClick } from "@tabler/icons-react";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
@@ -30,12 +31,15 @@ export const Hero = () => {
 					duration: 1,
 				}}
 			>
-				<AnimatePresence initial={false}>
+				<AnimatePresence>
 					<motion.button
 						onClick={() => setIsOpenMenu(true)}
 						className={s.circle}
 						whileTap={{
-							scale: 1.1,
+							scale: 0.95,
+						}}
+						whileHover={{
+							scale: 1.05,
 						}}
 					>
 						<p className={s.text}>
@@ -44,6 +48,25 @@ export const Hero = () => {
 						<p className={s.text}>
 							<Typewriter words={["I luv web developing!!"]} typeSpeed={50} />
 						</p>
+						{!isOpenMenu && (
+							<div className={s.clickWrapper}>
+								<motion.div
+									className={s.click}
+									initial={{ scale: 1 }}
+									animate={{ scale: [1, 1.1, 1] }}
+									transition={{
+										repeat: Number.POSITIVE_INFINITY,
+										repeatType: "loop",
+										duration: 3,
+										ease: "easeInOut",
+										times: [0, 0.5, 1],
+									}}
+								>
+									<IconClick size={"5vw"} color="#464443" />
+									<p className={clsx(s.text, s.clickText)}>Click!!</p>
+								</motion.div>
+							</div>
+						)}
 					</motion.button>
 					{isOpenMenu && (
 						<motion.button
@@ -51,7 +74,10 @@ export const Hero = () => {
 							onClick={() => setIsOpenMenu(false)}
 							className={clsx(s.circle, s.menuCircle)}
 							whileTap={{
-								scale: 1.1,
+								scale: 0.95,
+							}}
+							whileHover={{
+								scale: 1.05,
 							}}
 							initial={{
 								scale: 0,

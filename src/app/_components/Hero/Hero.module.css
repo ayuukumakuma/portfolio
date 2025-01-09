@@ -16,6 +16,20 @@
 	align-items: center;
 }
 
+.clickWrapper {
+	position: absolute;
+	left: 50%;
+	bottom: 3vw;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.click {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .circle {
 	display: flex;
 	flex-direction: column;
@@ -67,6 +81,10 @@
 			letter-spacing: normal;
 			font-size: 1rem;
 		}
+	}
+
+	&.clickText {
+		font-size: 1.2vw;
 	}
 }
 
