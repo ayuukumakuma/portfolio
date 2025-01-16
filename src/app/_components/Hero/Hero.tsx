@@ -3,6 +3,7 @@ import { IconClick } from "@tabler/icons-react";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
 import { Typewriter } from "react-simple-typewriter";
 import s from "./Hero.module.css";
 
@@ -113,34 +114,68 @@ export const Hero = () => {
 								rel="noreferrer"
 								className={s.linkWrapper}
 							>
-								<motion.div
-									className={s.link}
-									key="about"
-									initial={{
-										x: 0,
-									}}
-									animate={{
-										x: "50vw",
-									}}
-									exit={{
-										x: "150%",
-									}}
-									transition={{
-										duration: 0.2,
-									}}
-								>
-									<p className={clsx(s.text, s.linksText)}>about</p>
+								{isMobile ? (
 									<motion.div
-										className={s.triangle}
+										className={s.link}
+										key="about"
 										initial={{
-											rotate: 0,
+											x: 0,
+											y: 0,
 										}}
 										animate={{
-											rotate: 360,
+											x: "80vw",
+											y: "-20vw",
 										}}
-										transition={triangleVariant}
-									/>
-								</motion.div>
+										exit={{
+											x: "150%",
+											y: 0,
+										}}
+										transition={{
+											duration: 0.2,
+										}}
+									>
+										<p className={clsx(s.text, s.linksText)}>about</p>
+										<motion.div
+											className={s.triangle}
+											initial={{
+												rotate: 0,
+											}}
+											animate={{
+												rotate: 360,
+											}}
+											transition={triangleVariant}
+										/>
+									</motion.div>
+								) : (
+									<motion.div
+										className={s.link}
+										key="about"
+										initial={{
+											x: 0,
+										}}
+										animate={{
+											x: "50vw",
+										}}
+										exit={{
+											x: "150%",
+										}}
+										transition={{
+											duration: 0.2,
+										}}
+									>
+										<p className={clsx(s.text, s.linksText)}>about</p>
+										<motion.div
+											className={s.triangle}
+											initial={{
+												rotate: 0,
+											}}
+											animate={{
+												rotate: 360,
+											}}
+											transition={triangleVariant}
+										/>
+									</motion.div>
+								)}
 							</a>
 							<a
 								href="https://zenn.dev/ayuu"
@@ -148,66 +183,132 @@ export const Hero = () => {
 								className={s.linkWrapper}
 								rel="noreferrer"
 							>
-								<motion.div
-									className={s.link}
-									key="blog"
-									initial={{
-										x: 0,
-									}}
-									animate={{
-										x: "70vw",
-									}}
-									exit={{
-										x: "150%",
-									}}
-									transition={{
-										delay: 0.1,
-										duration: 0.2,
-									}}
-								>
-									<p className={clsx(s.text, s.linksText)}>blog</p>
+								{isMobile ? (
 									<motion.div
-										className={s.triangle}
+										className={s.link}
+										key="about"
 										initial={{
-											rotate: 0,
+											x: 0,
+											y: 0,
 										}}
 										animate={{
-											rotate: 360,
+											x: "80vw",
+											y: "10vw",
 										}}
-										transition={triangleVariant}
-									/>
-								</motion.div>
+										exit={{
+											x: "150%",
+											y: 0,
+										}}
+										transition={{
+											duration: 0.2,
+										}}
+									>
+										<p className={clsx(s.text, s.linksText)}>about</p>
+										<motion.div
+											className={s.triangle}
+											initial={{
+												rotate: 0,
+											}}
+											animate={{
+												rotate: 360,
+											}}
+											transition={triangleVariant}
+										/>
+									</motion.div>
+								) : (
+									<motion.div
+										className={s.link}
+										key="about"
+										initial={{
+											x: 0,
+										}}
+										animate={{
+											x: "70vw",
+										}}
+										exit={{
+											x: "150%",
+										}}
+										transition={{
+											duration: 0.2,
+										}}
+									>
+										<p className={clsx(s.text, s.linksText)}>about</p>
+										<motion.div
+											className={s.triangle}
+											initial={{
+												rotate: 0,
+											}}
+											animate={{
+												rotate: 360,
+											}}
+											transition={triangleVariant}
+										/>
+									</motion.div>
+								)}
 							</a>
 							<a href="mailto:nsn.ayumu@gmail.com" className={s.linkWrapper}>
-								<motion.div
-									className={s.link}
-									key="contact"
-									initial={{
-										x: 0,
-									}}
-									animate={{
-										x: "90vw",
-									}}
-									exit={{
-										x: "150%",
-									}}
-									transition={{
-										delay: 0.2,
-										duration: 0.2,
-									}}
-								>
-									<p className={clsx(s.text, s.linksText)}>contact</p>
+								{isMobile ? (
 									<motion.div
-										className={s.triangle}
+										className={s.link}
+										key="about"
 										initial={{
-											rotate: 0,
+											x: 0,
+											y: 0,
 										}}
 										animate={{
-											rotate: 360,
+											x: "80vw",
+											y: "40vw",
 										}}
-										transition={triangleVariant}
-									/>
-								</motion.div>
+										exit={{
+											x: "150%",
+											y: 0,
+										}}
+										transition={{
+											duration: 0.2,
+										}}
+									>
+										<p className={clsx(s.text, s.linksText)}>about</p>
+										<motion.div
+											className={s.triangle}
+											initial={{
+												rotate: 0,
+											}}
+											animate={{
+												rotate: 360,
+											}}
+											transition={triangleVariant}
+										/>
+									</motion.div>
+								) : (
+									<motion.div
+										className={s.link}
+										key="about"
+										initial={{
+											x: 0,
+										}}
+										animate={{
+											x: "90vw",
+										}}
+										exit={{
+											x: "150%",
+										}}
+										transition={{
+											duration: 0.2,
+										}}
+									>
+										<p className={clsx(s.text, s.linksText)}>about</p>
+										<motion.div
+											className={s.triangle}
+											initial={{
+												rotate: 0,
+											}}
+											animate={{
+												rotate: 360,
+											}}
+											transition={triangleVariant}
+										/>
+									</motion.div>
+								)}
 							</a>
 						</div>
 					)}

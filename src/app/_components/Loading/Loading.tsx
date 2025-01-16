@@ -33,7 +33,7 @@ export const Loading = () => {
 						width: 0,
 						height: 0,
 					}}
-					animate={{ width: "100vw", height: "100vw", scale: 2 }}
+					animate={{ width: "100vw", height: "100vw", scale: 3 }}
 					transition={{ delay: 1.3, duration: 1, ease: "circInOut" }}
 				/>
 			</div>
