@@ -57,7 +57,7 @@ export const Loading = () => {
 			))}
 			{!showMask && (
 				<AnimationBackground
-					duration={0.3}
+					duration={0.5}
 					plusColor="#fff"
 					scrollDirection="topToBottom"
 				/>
