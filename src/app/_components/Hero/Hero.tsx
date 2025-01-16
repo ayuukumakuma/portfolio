@@ -2,7 +2,6 @@
 import { IconClick } from "@tabler/icons-react";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "motion/react";
-import Link from "next/link";
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import s from "./Hero.module.css";
@@ -100,7 +99,12 @@ export const Hero = () => {
 				<AnimatePresence initial={false}>
 					{isOpenMenu && (
 						<div className={s.links}>
-							<Link href="/about" className={s.linkWrapper}>
+							<a
+								href="https://www.resume.id/ayuu"
+								target="_blank"
+								rel="noreferrer"
+								className={s.linkWrapper}
+							>
 								<motion.div
 									className={s.link}
 									key="about"
@@ -129,7 +133,7 @@ export const Hero = () => {
 										transition={triangleVariant}
 									/>
 								</motion.div>
-							</Link>
+							</a>
 							<a
 								href="https://zenn.dev/ayuu"
 								target="_blank"
@@ -166,7 +170,7 @@ export const Hero = () => {
 									/>
 								</motion.div>
 							</a>
-							<Link href="/contact" className={s.linkWrapper}>
+							<a href="mailto:nsn.ayumu@gmail.com" className={s.linkWrapper}>
 								<motion.div
 									className={s.link}
 									key="contact"
@@ -196,7 +200,7 @@ export const Hero = () => {
 										transition={triangleVariant}
 									/>
 								</motion.div>
-							</Link>
+							</a>
 						</div>
 					)}
 				</AnimatePresence>
