@@ -186,7 +186,7 @@ export const Hero = () => {
 								{isMobile ? (
 									<motion.div
 										className={s.link}
-										key="about"
+										key="blog"
 										initial={{
 											x: 0,
 											y: 0,
@@ -203,7 +203,7 @@ export const Hero = () => {
 											duration: 0.2,
 										}}
 									>
-										<p className={clsx(s.text, s.linksText)}>about</p>
+										<p className={clsx(s.text, s.linksText)}>blog</p>
 										<motion.div
 											className={s.triangle}
 											initial={{
@@ -218,7 +218,7 @@ export const Hero = () => {
 								) : (
 									<motion.div
 										className={s.link}
-										key="about"
+										key="blog"
 										initial={{
 											x: 0,
 										}}
@@ -232,7 +232,7 @@ export const Hero = () => {
 											duration: 0.2,
 										}}
 									>
-										<p className={clsx(s.text, s.linksText)}>about</p>
+										<p className={clsx(s.text, s.linksText)}>blog</p>
 										<motion.div
 											className={s.triangle}
 											initial={{
@@ -250,7 +250,7 @@ export const Hero = () => {
 								{isMobile ? (
 									<motion.div
 										className={s.link}
-										key="about"
+										key="contact"
 										initial={{
 											x: 0,
 											y: 0,
@@ -267,7 +267,7 @@ export const Hero = () => {
 											duration: 0.2,
 										}}
 									>
-										<p className={clsx(s.text, s.linksText)}>about</p>
+										<p className={clsx(s.text, s.linksText)}>contact</p>
 										<motion.div
 											className={s.triangle}
 											initial={{
@@ -282,7 +282,7 @@ export const Hero = () => {
 								) : (
 									<motion.div
 										className={s.link}
-										key="about"
+										key="contact"
 										initial={{
 											x: 0,
 										}}
@@ -296,7 +296,7 @@ export const Hero = () => {
 											duration: 0.2,
 										}}
 									>
-										<p className={clsx(s.text, s.linksText)}>about</p>
+										<p className={clsx(s.text, s.linksText)}>contact</p>
 										<motion.div
 											className={s.triangle}
 											initial={{
