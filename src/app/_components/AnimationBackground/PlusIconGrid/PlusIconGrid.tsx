@@ -3,7 +3,11 @@ import { IconPlus } from "@tabler/icons-react";
 import { useRef, useSyncExternalStore } from "react";
 import s from "./PlusIconGrid.module.css";
 
-export const PlusIconGrid = () => {
+type Props = {
+	plusColor?: string;
+};
+
+export const PlusIconGrid = ({ plusColor }: Props) => {
 	const subscribe = (callback: () => void) => {
 		if (typeof window !== "undefined") {
 			window.addEventListener("resize", callback);
@@ -48,6 +52,8 @@ export const PlusIconGrid = () => {
 	const x = Math.round(width / 128 / 2);
 	const y = Math.round(height / 128 / 2);
 
+	const color = plusColor ?? "#464443";
+
 	return (
 		<div className={s.column}>
 			{[...Array(y)].map((_, yidx) => {
@@ -56,7 +62,7 @@ export const PlusIconGrid = () => {
 						{[...Array(x)].map((_, xidx) => {
 							return (
 								<div key={xidx}>
-									<IconPlus size={64} color="#464443" />
+									<IconPlus size={64} color={color} />
 								</div>
 							);
 						})}

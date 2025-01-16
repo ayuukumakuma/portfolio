@@ -2,7 +2,7 @@
 import { IconClick } from "@tabler/icons-react";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import s from "./Hero.module.css";
 
@@ -10,6 +10,12 @@ type RepeatType = "loop" | "reverse" | "mirror" | undefined;
 
 export const Hero = () => {
 	const [isOpenMenu, setIsOpenMenu] = useState(false);
+	const [delay, setDelay] = useState(false);
+
+	useEffect(() => {
+		const timer = setTimeout(() => setDelay(true), 2000);
+		return () => clearTimeout(timer);
+	}, []);
 
 	const triangleVariant = {
 		repeat: Number.POSITIVE_INFINITY,
@@ -42,10 +48,12 @@ export const Hero = () => {
 						}}
 					>
 						<p className={s.text}>
-							<Typewriter words={["Hi! I'm Ayuu."]} typeSpeed={50} />
+							{delay && <Typewriter words={["Hi! I'm Ayuu."]} typeSpeed={50} />}
 						</p>
 						<p className={s.text}>
-							<Typewriter words={["I luv web developing!!"]} typeSpeed={50} />
+							{delay && (
+								<Typewriter words={["I luv web developing!!"]} typeSpeed={50} />
+							)}
 						</p>
 						{!isOpenMenu && (
 							<div className={s.clickWrapper}>

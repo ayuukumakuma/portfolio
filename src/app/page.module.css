@@ -5,6 +5,12 @@
 	position: relative;
 }
 
+.loadingWrapper {
+	z-index: 100;
+	position: fixed;
+	pointer-events: none;
+}
+
 .backgroundWrapper {
 	position: absolute;
 	top: 0;

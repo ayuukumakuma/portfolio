@@ -10,10 +10,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-	title: {
-		template: "%s |  Ayuu's Portfolio",
-		default: "Hi, I'm Ayuu!!",
-	},
+	title: "Hi, I'm Ayuu!!",
 	description: "This site is Ayuu's portfolio.",
 };
 

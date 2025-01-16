@@ -9,6 +9,8 @@ type Props = {
 		| "bottomToTop"
 		| "leftToRight"
 		| "rightToLeft";
+	plusColor?: string;
+	duration?: number;
 };
 
 const generateAnimateConfig = (scrollDirection: Props["scrollDirection"]) => {
@@ -75,7 +77,11 @@ const generateFlexDirection = (scrollDirection: Props["scrollDirection"]) => {
 	}
 };
 
-export const AnimationBackground = ({ scrollDirection }: Props) => {
+export const AnimationBackground = ({
+	scrollDirection,
+	plusColor,
+	duration,
+}: Props) => {
 	const { first, second } = generateAnimateConfig(scrollDirection);
 	const flexDirection = generateFlexDirection(scrollDirection);
 
@@ -87,10 +93,10 @@ export const AnimationBackground = ({ scrollDirection }: Props) => {
 					repeat: Number.POSITIVE_INFINITY,
 					repeatType: "loop",
 					ease: "linear",
-					duration: 30,
+					duration: duration ?? 30,
 				}}
 			>
-				<PlusIconGrid />
+				<PlusIconGrid plusColor={plusColor} />
 			</motion.div>
 			<motion.div
 				{...second}
@@ -98,10 +104,10 @@ export const AnimationBackground = ({ scrollDirection }: Props) => {
 					repeat: Number.POSITIVE_INFINITY,
 					repeatType: "loop",
 					ease: "linear",
-					duration: 30,
+					duration: duration ?? 30,
 				}}
 			>
-				<PlusIconGrid />
+				<PlusIconGrid plusColor={plusColor} />
 			</motion.div>
 		</div>
 	);

@@ -1,5 +1,6 @@
 declare const styles:
   & Readonly<{ "root": string }>
+  & Readonly<{ "loadingWrapper": string }>
   & Readonly<{ "backgroundWrapper": string }>
   & Readonly<{ "topRight": string }>
   & Readonly<{ "bottomLeft": string }>

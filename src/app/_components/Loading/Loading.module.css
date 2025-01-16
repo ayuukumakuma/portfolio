@@ -1,0 +1,52 @@
+.root {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.background {
+	position: absolute;
+	height: 100vh;
+}
+
+.base {
+	width: 50vw;
+	background-color: #01102a;
+}
+
+.first {
+	background-color: #01173d;
+	width: 30vw;
+}
+
+.second {
+	width: 20vw;
+	background-color: #2d8ba7;
+}
+
+.third {
+	width: 14vw;
+	background-color: #44d2fd;
+}
+
+.maskWrapper {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+}
+
+.mask {
+	background-color: transparent;
+	border-radius: 50%;
+	box-shadow: 0 0 0 100vmax #fff;
+	pointer-events: none;
+}
